@@ -1,0 +1,57 @@
+{
+	"name": "n8n-nodes-template",
+	"version": "0.1.0",
+	"description": "Template de démarrage pour créer un package de nœuds communautaires n8n",
+	"license": "MIT",
+	"homepage": "",
+	"keywords": [
+		"n8n-community-node-package"
+	],
+	"author": {
+		"name": "Votre Nom",
+		"email": "vous@example.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"scripts": {
+		"clean": "rimraf dist",
+		"build": "tsc && gulp build:icons",
+		"rebuild": "npm run clean && npm run build",
+		"dev": "tsc --watch",
+		"format": "prettier nodes credentials package.json gulpfile.js --write",
+		"format:check": "prettier nodes credentials package.json gulpfile.js --check",
+		"lint": "eslint nodes credentials package.json ",
+		"lint:fix": "eslint nodes credentials package.json --fix",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"ci": "npm run format:check && npm run lint",
+		"prepack": "npm run rebuild"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/ExampleApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/ExampleNode/ExampleNode.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.39.5",
+		"gulp": "5.0.1",
+		"prettier": "3.9.6",
+		"release-it": "21.0.1",
+		"rimraf": "6.1.3",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
