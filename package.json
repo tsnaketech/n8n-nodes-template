@@ -15,6 +15,9 @@
 		"type": "git",
 		"url": ""
 	},
+	"engines": {
+		"node": ">=22.0.0"
+	},
 	"scripts": {
 		"clean": "rimraf dist",
 		"build": "tsc && gulp build:icons",
