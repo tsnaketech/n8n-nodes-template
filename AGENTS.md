@@ -50,10 +50,10 @@ dans n8n (voir README, section « Testing locally in n8n »).
 
 ## Conventions de code
 
-- Prettier (`.prettierrc.js`) : **tabulations**, largeur 100, guillemets simples, points-virgules,
-  virgules finales partout, fins de ligne LF. Attention : les fichiers `.ts` existants sont
-  indentés en espaces (2), en désaccord avec cette config. Suivre l'indentation du fichier
-  qu'on modifie plutôt que de reformater en masse ; un reformatage global doit être une
+- Prettier (`prettier.config.js`) : **tabulations**, largeur 100, guillemets simples,
+  points-virgules, virgules finales partout, fins de ligne LF. Attention : les fichiers `.ts`
+  existants sont indentés en espaces (2), en désaccord avec cette config. Suivre l'indentation du
+  fichier qu'on modifie plutôt que de reformater en masse ; un reformatage global doit être une
   tâche à part, explicitement demandée.
 - ESLint : config `@n8n/node-cli/eslint`, non personnalisée. Elle impose les règles n8n sur
   le nommage des paramètres, `displayName`, l'ordre des options, etc. — ces erreurs de lint
